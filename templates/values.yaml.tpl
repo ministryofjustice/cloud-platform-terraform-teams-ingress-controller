@@ -86,9 +86,6 @@ controller:
 
   extraArgs:
     default-ssl-certificate: ${namespace}/default-certificate
-  
-  admissionWebhooks:
-    enabled: true
 
 defaultBackend:
   image:

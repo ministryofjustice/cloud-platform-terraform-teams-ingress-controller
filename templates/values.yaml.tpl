@@ -80,12 +80,8 @@ controller:
 
   service:
     annotations:
-      external-dns.alpha.kubernetes.io/hostname: "${external_dns_annotation}"
       service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
     externalTrafficPolicy: "Local"
-
-  extraArgs:
-    default-ssl-certificate: ${namespace}/default-certificate
 
 defaultBackend:
   image:
@@ -94,5 +90,3 @@ defaultBackend:
 
 rbac:
   create: true
-podSecurityPolicy:
-  enabled: true

@@ -12,6 +12,5 @@ provider "helm" {
 module "ingress_controller" {
   source = "../"
 
-  namespace     = "starter-pack"
-  hostzone_name = "mogaal.cloud-platform.service.justice.gov.uk"
+  namespace = "mogaal-test"
 }

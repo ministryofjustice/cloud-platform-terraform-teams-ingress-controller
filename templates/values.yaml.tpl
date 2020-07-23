@@ -1,3 +1,6 @@
+%{ if custom_values }
+${custom_values_content}
+%{~ else ~}
 controller:
   replicaCount: 1
 
@@ -90,3 +93,4 @@ defaultBackend:
 
 rbac:
   create: true
+%{~ endif ~}

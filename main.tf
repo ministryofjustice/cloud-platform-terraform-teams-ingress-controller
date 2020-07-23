@@ -17,6 +17,8 @@ resource "helm_release" "nginx" {
   namespace = "ingress-controllers"
 
   values = [templatefile("${path.module}/templates/values.yaml.tpl", {
-    namespace = var.namespace
+    namespace             = var.namespace
+    custom_values         = var.custom_values
+    custom_values_content = var.custom_values_content
   })]
 }

@@ -14,3 +14,14 @@ module "ingress_controller" {
 
   namespace = "mogaal-test"
 }
+
+#module "ingress_controller" {
+#  source = "../"
+#
+#  namespace = "mogaal-test"
+#  custom_values = true
+#  custom_values_content = <<EOF
+#This is a long key.
+#Running over several lines.
+#EOF
+#}

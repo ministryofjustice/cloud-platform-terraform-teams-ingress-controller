@@ -20,5 +20,6 @@ resource "helm_release" "nginx" {
     namespace             = var.namespace
     custom_values         = var.custom_values
     custom_values_content = var.custom_values_content
+    default_cert          = var.default_cert
   })]
 }

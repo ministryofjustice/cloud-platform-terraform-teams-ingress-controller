@@ -81,6 +81,11 @@ controller:
       enabled: true
       namespace: ${namespace}
 
+%{ if default_cert != "" }
+  extraArgs:
+    default-ssl-certificate: ${default_cert}
+%{~ endif ~}
+
   service:
     annotations:
       service.beta.kubernetes.io/aws-load-balancer-type: "nlb"

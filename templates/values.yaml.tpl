@@ -1,7 +1,9 @@
 %{ if custom_values }
 ${custom_values_content}
 %{~ else ~}
+nameOverride: "nx"
 controller:
+  name: ic
   replicaCount: 1
 
   ingressClass: ${namespace}

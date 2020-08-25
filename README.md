@@ -1,5 +1,7 @@
 # cloud-platform-terraform-ingress-controller
 
+[![Releases](https://img.shields.io/github/release/ministryofjustice/cloud-platform-terraform-teams-ingress-controller/all.svg?style=flat-square)](https://github.com/ministryofjustice/cloud-platform-terraform-teams-ingress-controller/releases)
+
 Terraform module used by teams to deploy nginx ingress controller in their namespaces
 
 ## Usage

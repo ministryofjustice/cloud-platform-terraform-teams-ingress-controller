@@ -20,7 +20,7 @@ module "ingress_controller" {
 | custom_values          | Set to true if you do not want to use the default values.yaml provided, fill custom_values_content variable with your custom values  | bool |    ""   |    yes   |
 | custom_values_content  | Provide `values.yaml` content for custom configuration                             | string |    ""   |    yes   |
 | default_cert           | Useful if you want to use a default certificate for your ingress controller. Format: namespace/secretName"  | string |    ""   |    yes   |
-| is_prod                | If set to true: 2 ingress controller replicas are going to be deployed. Default: 1 replica | bool |  false   |  no   |
+| is_production          | If set to true: 2 ingress controller replicas are going to be deployed. Default: 1 replica | bool |  false   |  no   |
 
 ## Outputs
 

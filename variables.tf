@@ -22,7 +22,7 @@ variable "default_cert" {
   default     = ""
 }
 
-variable "is_prod" {
+variable "is_production" {
   type        = bool
   description = "If set to true: 2 ingress controller replicas are going to be deployed. Default: 1 replica"
   default     = false

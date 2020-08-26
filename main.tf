@@ -21,6 +21,6 @@ resource "helm_release" "nginx" {
     custom_values         = var.custom_values
     custom_values_content = var.custom_values_content
     default_cert          = var.default_cert
-    replicaCount          = var.is_prod ? 2 : 1
+    replicaCount          = var.is_production ? 2 : 1
   })]
 }

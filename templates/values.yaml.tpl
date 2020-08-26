@@ -4,7 +4,7 @@ ${custom_values_content}
 nameOverride: "nx"
 controller:
   name: ic
-  replicaCount: 1
+  replicaCount: ${replicaCount}
 
   ingressClass: ${namespace}
   electionID: ingress-controller-leader-${namespace}

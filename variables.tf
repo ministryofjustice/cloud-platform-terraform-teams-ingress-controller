@@ -18,6 +18,12 @@ variable "custom_values_content" {
 
 variable "default_cert" {
   type        = string
-  description = "This is particulary useful if you want your ingress controller to use a default TLS certificate, specify: namespace/secretName"
+  description = "Useful if you want to use a default certificate for your ingress controller. Format: namespace/secretName"
   default     = ""
+}
+
+variable "is_prod" {
+  type        = bool
+  description = "If set to true: 2 ingress controller replicas are going to be deployed. Default: 1 replica"
+  default     = false
 }

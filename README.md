@@ -14,9 +14,13 @@ module "ingress_controller" {
 
 ## Inputs
 
-| Name       | Description                                                                        | Type   | Default | Required |
-|------------|------------------------------------------------------------------------------------|:------:|:-------:|:--------:|
-| namespace  | Namespace where ingress controller is going to be looking for ingresses            | string |    ""   |    yes   |
+| Name                   | Description                                                                        | Type   | Default | Required |
+|------------------------|------------------------------------------------------------------------------------|:------:|:-------:|:--------:|
+| namespace              | Namespace where ingress controller is going to be looking for ingresses            | string |    ""   |    yes   |
+| custom_values          | Set to true if you do not want to use the default values.yaml provided, fill custom_values_content variable with your custom values  | bool |    ""   |    yes   |
+| custom_values_content  | Provide `values.yaml` content for custom configuration                             | string |    ""   |    yes   |
+| default_cert           | Useful if you want to use a default certificate for your ingress controller. Format: namespace/secretName"  | string |    ""   |    yes   |
+| is_prod                | If set to true: 2 ingress controller replicas are going to be deployed. Default: 1 replica | bool |  false   |  no   |
 
 ## Outputs
 

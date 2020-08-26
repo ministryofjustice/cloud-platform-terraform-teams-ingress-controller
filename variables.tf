@@ -19,7 +19,7 @@ variable "custom_values_content" {
 variable "default_cert" {
   type        = string
   description = "Useful if you want to use a default certificate for your ingress controller. Format: namespace/secretName"
-  default     = ""
+  default     = "ingress-controllers/default-certificate"
 }
 
 variable "is_production" {

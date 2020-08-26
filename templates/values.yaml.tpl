@@ -8,9 +8,6 @@ controller:
 
   ingressClass: ${namespace}
   electionID: ingress-controller-leader-${namespace}
-  scope:
-    enabled: true
-    namespace: ${namespace}
 
   config:
     enable-modsecurity: "true"

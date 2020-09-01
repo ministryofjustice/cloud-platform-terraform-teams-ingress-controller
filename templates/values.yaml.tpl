@@ -78,7 +78,7 @@ controller:
     enabled: true
     serviceMonitor:
       enabled: true
-      namespace: ${namespace}
+      namespace: ingress-controllers
 
 %{ if default_cert != "" }
   extraArgs:

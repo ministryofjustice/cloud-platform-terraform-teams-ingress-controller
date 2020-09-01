@@ -8,9 +8,10 @@ Terraform module used by teams to deploy nginx ingress controller in their names
 
 ```hcl
 module "ingress_controller" {
-  source = "github.com/ministryofjustice/cloud-platform-terraform-teams-ingress-controller?ref=0.0.1"
+  source = "github.com/ministryofjustice/cloud-platform-terraform-teams-ingress-controller?ref=0.0.9"
 
-  namespace     = "starter-pack"
+  namespace     = var.namespace
+  is_production = var.is_production
 }
 ```
 

@@ -23,7 +23,8 @@ module "ingress_controller" {
 | custom_values_content  | Provide `values.yaml` content for custom configuration                             | string |    ""   |    yes   |
 | default_cert           | Useful if you want to use a default certificate for your ingress controller. Format: namespace/secretName"  | string |    ""   |    yes   |
 | is_production          | If set to true: 2 ingress controller replicas are going to be deployed. Default: 1 replica | bool |  false   |  no   |
-| dependence_prometheus  | When deployed cloud-platform-components monitoring nginx ingress controller, if prometheus is not deployed first it fails because it installs serviceMonitor (CRD from prometheus) | string | "NOTHING"  |  no   |
+| dependence_prometheus  | When deployed monitoring nginx ingress controller, if prometheus is not deployed before this module fails because it installs serviceMonitor (CRD from prometheus) | string | "NOTHING"  |  no   |
+| dependence_certmanager | When deployed monitoring nginx ingress controller, if certmanager is not deployed before this module fails because it uses certmanager defaultCertificate | string | "NOTHING"  |  no   |
 
 ## Outputs
 

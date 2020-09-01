@@ -25,7 +25,8 @@ resource "helm_release" "nginx" {
   })]
 
   depends_on = [
-    var.dependence_prometheus
+    var.dependence_prometheus,
+    var.dependence_certmanager
   ]
 
 }

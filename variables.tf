@@ -33,3 +33,9 @@ variable "dependence_prometheus" {
   description = "When deployed cloud-platform-components monitoring nginx ingress controller, if prometheus is not deployed first it fails because it installs serviceMonitor (CRD from prometheus)"
   default     = "NOTHING"
 }
+
+variable "dependence_certmanager" {
+  type        = string
+  description = "When deployed monitoring nginx ingress controller, if certmanager is not deployed before this module fails because it uses certmanager defaultCertificate"
+  default     = "NOTHING"
+}

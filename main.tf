@@ -23,10 +23,4 @@ resource "helm_release" "nginx" {
     default_cert          = var.default_cert
     replicaCount          = var.is_production ? 2 : 1
   })]
-
-  depends_on = [
-    var.dependence_prometheus,
-    var.dependence_certmanager
-  ]
-
 }

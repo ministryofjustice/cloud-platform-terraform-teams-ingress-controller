@@ -70,6 +70,9 @@ controller:
 
   publishService:
     enabled: true
+  
+  admissionWebhooks:
+    enabled: false
 
   stats:
     enabled: true

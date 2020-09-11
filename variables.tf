@@ -27,3 +27,15 @@ variable "is_production" {
   description = "If set to true: 2 ingress controller replicas are going to be deployed. Default: 1 replica"
   default     = false
 }
+
+variable "dependence_prometheus" {
+  type        = string
+  description = "When deployed cloud-platform-components integration_test nginx ingress controller, if prometheus is not deployed first it fails because it installs serviceMonitor (CRD from prometheus)"
+  default     = "NOTHING"
+}
+
+variable "dependence_certmanager" {
+  type        = string
+  description = "When deployed integration_test nginx ingress controller, if certmanager is not deployed before this module fails because it uses certmanager defaultCertificate"
+  default     = "NOTHING"
+}

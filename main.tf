@@ -1,17 +1,9 @@
-########
-# Helm #
-########
-
-data "helm_repository" "ingress-nginx" {
-  name = "ingress-nginx"
-  url  = "https://kubernetes.github.io/ingress-nginx"
-}
 
 resource "helm_release" "nginx" {
   # If we leave ingress-controller-${namespace} we get Error: Service "ingress-controller-starter-pack-nginx-ingress-controller-admission" is invalid: metadata.name: Invalid value: "ingress-controller-starter-pack-nginx-ingress-controller-admission": must be no more than 63 characters
   name       = var.namespace
   chart      = "ingress-nginx"
-  repository = data.helm_repository.ingress-nginx.metadata[0].name
+  repository = "https://kubernetes.github.io/ingress-nginx"
   version    = "2.13.0"
 
   namespace = "ingress-controllers"
